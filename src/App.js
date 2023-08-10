@@ -27,7 +27,7 @@ function App() {
   return (
     <section className='container'>
       <h1>ToDoList</h1>
-      {alert.show && <Alert {...alert}/>}
+      {alert.show && <Alert {...alert} setAlert={setAlert} list={list}/>}
       <form className='form-group' onSubmit={submitData}>
         <div className="form-control">
           <input type='text' className='text-input' 
