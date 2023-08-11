@@ -56,3 +56,8 @@ h1{
 .alert.success{
   background-color: greenyellow;
 }
+.btn{
+  font-size: 1.4rem;
+  margin-left: 0.8rem;
+  cursor: pointer;
+}
