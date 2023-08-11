@@ -24,6 +24,12 @@ function App() {
     }
   }
 
+  const removeItem=(id)=>{
+    const result= list.filter((item)=>item.id !== id)    
+    setList(result)
+    setAlert({show:true,msg:"削除済み",type:"error"})
+  }
+
   return (
     <section className='container'>
       <h1>ToDoList</h1>
@@ -39,7 +45,7 @@ function App() {
       </form>
       <section className='list-container'>
         {list.map((data,index)=>{
-          return <List key={index} {...data}/>
+          return <List key={index} {...data} removeItem={removeItem}/>
         })}
       </section>
     </section>
